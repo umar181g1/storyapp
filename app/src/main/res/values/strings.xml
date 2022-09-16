@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">StoryApp</string>
+    <string name="signup">Daftar</string>
+    <string name="login">Masuk</string>
+    <string name="title_signup_page">Lengkapi data dirimu di bawah ini ya</string>
+    <string name="email">Email</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="loginer">Anda gagal Login</string>
+    <string name="password">Password</string>
+    <string name="passwor_hrus">Passwor Harus lebh dari 6 karakter </string>
+    <string name="name">Nama</string>
+    <string name="register">belom punyak akun</string>
+    <string name="registasi_yuk">Sing Up</string>
+    <string name="msq">input email </string>
+    <string name="msa">input password</string>
+    <string name="photo">photo</string>
+    <string name="logout">Keluar</string>
+</resources>
