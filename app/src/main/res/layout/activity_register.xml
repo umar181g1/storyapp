@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".register.RegisterActivity">
+    tools:context=".ui.register.RegisterActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/nameTextView"
         app:startIconDrawable="@drawable/ic_baseline_person_24">
 
-        <com.umar.storyapp.costumeview.EditText
+        <com.umar.storyapp.costumeview.EditTextClear
             android:id="@+id/nameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

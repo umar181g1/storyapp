@@ -3,6 +3,7 @@ package com.umar.storyapp.model
 import android.util.Log
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.lifecycle.LiveData
@@ -46,20 +47,21 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
     suspend fun setToken(token: String, isLogin: Boolean) {
         dataStore.edit { preferences ->
             preferences[TOKEN] = token
-            preferences[STATE_KEY] = isLogin.toString()
+            preferences[STATE_KEY] = isLogin
         }
     }
 
-    fun isLogin(): Flow<Any> {
+    fun isLogin(): Flow<Boolean> {
         return dataStore.data.map { preferences ->
             preferences[STATE_KEY] ?: false
+
         }
     }
 
     suspend fun logout() {
         dataStore.edit { preferences ->
             preferences[TOKEN] = ""
-            preferences[STATE_KEY] = false.toString()
+            preferences[STATE_KEY] = false
         }
     }
 
@@ -69,7 +71,7 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         private var INSTANCE: UserPreference? =null
 
         private val  TOKEN = stringPreferencesKey("token")
-        private val STATE_KEY = stringPreferencesKey("statce")
+        private val STATE_KEY = booleanPreferencesKey("state")
 
         fun getInstance(dataStore: DataStore<Preferences>, apiService: ApiService): UserPreference {
             return INSTANCE ?: synchronized(this){

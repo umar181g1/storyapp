@@ -15,4 +15,11 @@
     <string name="msa">input password</string>
     <string name="photo">photo</string>
     <string name="logout">Keluar</string>
+    <string name="galery">Galery</string>
+    <string name="description">Descripsion</string>
+    <string name="desc_hint">desc hit</string>
+    <string name="upload">upload</string>
+    <string name="choose_a_picture">Choose a picture</string>
+    <string name="input_des">Input Deskripsi</string>
+    <string name="no_image">no_imgae</string>
 </resources>

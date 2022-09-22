@@ -4,9 +4,9 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.umar.storyapp.di.UserInjection
-import com.umar.storyapp.login.LoginViewModel
 import com.umar.storyapp.model.UserPreference
-import com.umar.storyapp.register.RegisViewModel
+import com.umar.storyapp.ui.login.LoginViewModel
+import com.umar.storyapp.ui.register.RegisViewModel
 
 class UserFactoryVM private constructor(private val preference: UserPreference) :
     ViewModelProvider.NewInstanceFactory() {
@@ -23,6 +23,7 @@ class UserFactoryVM private constructor(private val preference: UserPreference) 
             }
         }
     }
+
     companion object {
         @Volatile
         private var instance: UserFactoryVM? = null

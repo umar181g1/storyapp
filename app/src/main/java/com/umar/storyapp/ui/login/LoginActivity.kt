@@ -1,4 +1,4 @@
-package com.umar.storyapp.login
+package com.umar.storyapp.ui.login
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
@@ -11,19 +11,17 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.umar.storyapp.MainActivity
 import com.umar.storyapp.R
 import com.umar.storyapp.databinding.ActivityLoginBinding
 import com.umar.storyapp.factoryviewmodel.UserFactoryVM
-import com.umar.storyapp.model.ResponseLogin
 import com.umar.storyapp.model.Result
-import com.umar.storyapp.register.RegisterActivity
+import com.umar.storyapp.ui.main.MainActivity
+import com.umar.storyapp.ui.register.RegisterActivity
 
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var loginViewModel: LoginViewModel
-    private lateinit var login: ResponseLogin
     private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,15 +52,16 @@ class LoginActivity : AppCompatActivity() {
     private fun setupViewModel() {
         val factory: UserFactoryVM = UserFactoryVM.getInstance(this)
         loginViewModel = ViewModelProvider(this, factory)[LoginViewModel::class.java]
-
         loginViewModel.getToken().observe(this) { token ->
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
+            if (token.isNotEmpty()) {
+                startActivity(Intent(this, MainActivity::class.java))
+                finish()
+            }
 
         }
 
-    }
 
+    }
 
     private fun setupAction() {
         binding.loginButton.setOnClickListener {
@@ -110,9 +109,16 @@ class LoginActivity : AppCompatActivity() {
                         }
                     }
                 }
+
+
             }
         }
-        binding.register.setOnClickListener {
+
+
+
+
+
+        binding.singUp.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
@@ -134,7 +140,7 @@ class LoginActivity : AppCompatActivity() {
             ObjectAnimator.ofFloat(binding.passwordEditTextLayout, View.ALPHA, 1f).setDuration(500)
         val login = ObjectAnimator.ofFloat(binding.loginButton, View.ALPHA, 1f).setDuration(500)
         val tvReg = ObjectAnimator.ofFloat(binding.noAcunt, View.ALPHA, 1f).setDuration(500)
-        val tvRegLog = ObjectAnimator.ofFloat(binding.register, View.ALPHA, 1f).setDuration(500)
+        val tvRegLog = ObjectAnimator.ofFloat(binding.singUp, View.ALPHA, 1f).setDuration(500)
 
         AnimatorSet().apply {
             playSequentially(

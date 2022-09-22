@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.LoginActivity">
+    tools:context=".ui.login.LoginActivity">
 
 
     <ImageView
@@ -51,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_edit"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:padding="15dp"
@@ -142,25 +142,30 @@
         app:layout_constraintGuide_percent="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
+
     <TextView
         android:id="@+id/no_acunt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
         android:text="@string/register"
         android:textSize="14sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="591dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/register"
+        android:id="@+id/singUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/registasi_yuk"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="88dp"
+        android:text="@string/signup"
         android:textSize="14sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="620dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ProgressBar
         android:id="@+id/progressBar"

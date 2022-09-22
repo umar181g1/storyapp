@@ -41,6 +41,7 @@
             android:layout_toRightOf="@id/img_photo"
             android:textStyle="bold" />
 
+
         <TextView
             android:id="@+id/txt_deskripsi"
             android:layout_width="match_parent"

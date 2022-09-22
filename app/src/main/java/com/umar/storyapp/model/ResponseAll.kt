@@ -1,6 +1,8 @@
 package com.umar.storyapp.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
 data class ResponseAll(
 
@@ -14,6 +16,7 @@ data class ResponseAll(
 	val message: String? = null
 )
 
+@Parcelize
 data class ListStoryItem(
 
 	@field:SerializedName("photoUrl")
@@ -36,4 +39,4 @@ data class ListStoryItem(
 
 	@field:SerializedName("lat")
 	val lat: Double? = null
-)
+) : Parcelable

@@ -3,6 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/storyapp1/app/src/main/res/layout/activity_add_story.xml" value="0.2" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/storyapp1/app/src/main/res/layout/activity_detail.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/storyapp1/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/storyapp1/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/storyapp1/app/src/main/res/layout/activity_register.xml" value="0.1" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/storyapp1/app/src/main/res/layout/activity_splash.xml" value="0.1453804347826087" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/storyapp1/app/src/main/res/layout/item_story_row.xml" value="0.2721518987341772" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/storyapp1/app/src/main/res/menu/menu.xml" value="0.2" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/storyapp1/app/src/main/res/xml/patch_file.xml" value="0.2" />
         <entry key="..\:/Users/Toshiba/AndroidStudioProjects/StoryApp/app/src/main/res/drawable/bg_edit.xml" value="0.1" />
         <entry key="..\:/Users/Toshiba/AndroidStudioProjects/StoryApp/app/src/main/res/drawable/buttom.xml" value="0.1" />
         <entry key="..\:/Users/Toshiba/AndroidStudioProjects/StoryApp/app/src/main/res/drawable/buttom_ds.xml" value="0.1" />

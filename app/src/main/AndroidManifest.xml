@@ -13,6 +13,16 @@
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
 
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <data android:scheme="https" />
+        </intent>
+    </queries>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -24,10 +34,22 @@
         android:theme="@style/Theme.StoryApp"
         tools:targetApi="31">
         <activity
-            android:name=".register.RegisterActivity"
+            android:name=".ui.story.AddStoryActivity"
             android:exported="false" />
         <activity
-            android:name=".login.LoginActivity"
+            android:name=".ui.Detail.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.umar.storyapp.ui.register.RegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.umar.storyapp.ui.login.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.umar.storyapp.ui.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,9 +57,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.umar.storyapp.ui.stroy"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/patch_file" />
+        </provider>
     </application>
 
 </manifest>

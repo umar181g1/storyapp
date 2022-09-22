@@ -6,24 +6,28 @@ import android.text.TextWatcher
 import android.util.AttributeSet
 import android.util.Patterns
 import androidx.appcompat.widget.AppCompatEditText
-import com.bumptech.glide.Glide.init
 import com.umar.storyapp.R
 
 class EditText : AppCompatEditText {
 
-    constructor(context: Context) : super(context){
-        init()
-    }
-    constructor(context: Context, attrs: AttributeSet) : super(context, attrs){
+    constructor(context: Context) : super(context) {
         init()
     }
 
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr){
+    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
+        init()
+    }
+
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
         init()
     }
 
     private fun init() {
-        addTextChangedListener(object : TextWatcher{
+        addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 // noting
             }

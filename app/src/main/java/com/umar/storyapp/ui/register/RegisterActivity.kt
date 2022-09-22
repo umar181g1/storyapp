@@ -1,4 +1,4 @@
-package com.umar.storyapp.register
+package com.umar.storyapp.ui.register
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
